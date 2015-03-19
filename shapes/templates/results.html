@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Αποτελέσματα για {{shape}}{% endblock %}
+
+{% block content %}
+<div>Εμβαδό: {{area}}</div>
+<div>Περίμετρος: {{perimeter}}</div>
+
+<form action="{% url 'save' %}">
+    <input type="hidden" name="shape" value="{{shape}}" />
+    <input type="hidden" name="dimensions" value="{{dimensions}}" />
+    <input type="submit" value="Αποθήκευση" />
+</form>
+{% endblock %}
