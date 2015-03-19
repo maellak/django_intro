@@ -2,9 +2,8 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'django_intro.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^calculate/', 'shapes.views.calculate', name='calculate'),
+    url(r'^save/', 'shapes.views.save', name='save'),
+    url(r'^$', 'shapes.views.home', name='home'),
 )
