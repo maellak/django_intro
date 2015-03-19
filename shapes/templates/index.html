@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Επιλογή Σχήματος{% endblock %}
+
+{% block content %}
+<form action="{% url 'calculate' %}">
+    <select name="shape">
+        <option value="triangle">Τρίγωνο</option>
+        <option value="parallelogram">Παραλληλόγραμμο</option>
+    </select>
+    <input type="text" name="dimensions" placeholder="Διαστάσεις (A,B,C)" />
+    <input type="submit" value="Υπολογισμός Εμβαδού & Περιμέτρου" />
+</form>
+{% endblock %}
