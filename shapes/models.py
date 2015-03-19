@@ -1,7 +1,7 @@
 from django.db import models
 
 class Shape(models.Model):
-    dimensions = models.IntegerField(max_length=200)
+    dimensions = models.CharField(max_length=200)
     area = models.IntegerField(max_length=200)
     perimeter = models.IntegerField(max_length=200)
     def calculateArea(self, dimensions):
